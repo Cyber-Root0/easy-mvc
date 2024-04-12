@@ -1,0 +1,21 @@
+{
+    "name": "cyber-root0/easy-mvc",
+    "description": "Provide a simple and intuitive MVC application with D.I",
+    "type": "project",
+    "license": "Free",
+    "autoload": {
+        "psr-4": {
+            "CyberRoot0\\EasyMvc\\": "app/",
+            "EasyMvc\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bruno Alves",
+            "email": "boteistem@gmail.com"
+        }
+    ],
+    "require": {
+        "php-di/php-di": "^7.0"
+    }
+}
