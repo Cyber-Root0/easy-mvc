@@ -18,6 +18,12 @@ use CyberRoot0\EasyMVC\Controller\Funcionario\{
     Update as UpdatFunc, 
     Delete as DelFunc
 };
+use CyberRoot0\EasyMVC\Controller\Produto\{
+    Index as ProdIndex,
+    Create as ProdCreate,
+    Update as ProdUpdate,
+    Delete as ProdDelete
+};
 $routes = [
     '/' => Main::class,
     /* Cliente Routes */
@@ -35,6 +41,12 @@ $routes = [
     '/funcionarios/delete/{id}' => DelFunc::class,
     '/funcionarios/create/' => CreateFunc::class,
     '/funcionarios/update/{id}' => UpdatFunc::class,
+     /* Produto Routes */
+     '/produtos/' => ProdIndex::class,
+    '/produtos/delete/{id}' => ProdDelete::class,
+    '/produtos/create/' => ProdCreate::class,
+    '/produtos/update/{id}' => ProdUpdate::class,
+
 ];
 
 /* Process route and return action  */
