@@ -69,7 +69,7 @@
             </div>
            <!-- Conteúdo do site -->
            <div class="col-auto col-md-9 ms-5 mt-4 bg-light py-3">
-                <h2>Clientes</h2>
+                <h2>Fornecedor</h2>
 
                 <!-- Breadcrumb -->
                 <nav class="mt-4 mb-2" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -91,22 +91,23 @@
                             <div class="row">
                                 <div class="form-group col-md-3 flex-fill">
                                     <label for="nome" class="" >Nome</label>
-                                    <input type="text" name="nome" id="nome" required class="form-control">
+                                    <input type="text" name="nome" id="nome" required class="form-control" value="<?=$out['nome']?>">
+                                    <input type="hidden" name="id" id="nome" required class="form-control" value="<?=$out['id']?>">
                                 </div>
 
                                 <div class="form-group col-md-3 flex-fill">
-                                    <label for="email">Sobrenome</label>
-                                    <input type="text" name="sobrenome" id="descriptions" required class="form-control">
+                                    <label for="email">Contato</label>
+                                    <input type="number" name="contato" id="descriptions" required class="form-control" value="<?=$out['contato']?>">
                                 </div>
 
                                 <div class="form-group col-md-3 flex-fill">
-                                    <label for="valor">Idade</label>
-                                    <input type="text" name="idade" id="idade" required class="form-control">
+                                    <label for="valor">Email</label>
+                                    <input type="email" name="email" id="idade" required class="form-control" value="<?=$out['email']?>">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-end pt-3">
                                 <div class="col-md-2 ">
-                                    <input type="submit" name="cadastrar" class="w-100 btn  btn-primary" value="Cadastrar">
+                                    <input type="submit" name="cadastrar" class="w-100 btn  btn-primary" value="Atualizar">
                                 </div>
                             </div>
                         </div>
