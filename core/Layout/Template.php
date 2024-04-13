@@ -1,6 +1,6 @@
 <?php
-namespace EasyMvc\Layout;
-use EasyMvc\Api\TemplateApi;
+namespace EasyMVC\Layout;
+use EasyMVC\Api\TemplateApi;
 class Template implements TemplateApi
 {    
     private string $ext = '.phtml';

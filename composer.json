@@ -5,8 +5,8 @@
     "license": "Free",
     "autoload": {
         "psr-4": {
-            "CyberRoot0\\EasyMvc\\": "app/",
-            "EasyMvc\\": "core/"
+            "CyberRoot0\\EasyMVC\\": "app/",
+            "EasyMVC\\": "core/"
         }
     },
     "authors": [

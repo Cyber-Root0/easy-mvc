@@ -1,5 +1,5 @@
 <?php
-use EasyMvc\Layout\Template;
+use EasyMVC\Layout\Template;
 return [
     'config' => [
         'view' => [

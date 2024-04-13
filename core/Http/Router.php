@@ -1,5 +1,5 @@
 <?php
-namespace EasyMvc\Http;
+namespace EasyMVC\Http;
 class Router
 {
     private $routes = [];

@@ -1,7 +1,7 @@
 <?php
 use DI\Container;
-use EasyMvc\Http\Router;
-use EasyMvc\DI\ObjectManager;
+use EasyMVC\Http\Router;
+use EasyMVC\DI\ObjectManager;
 /* DI Configuration */
 $containerDinition = require(__DIR__.'/../config/di/container.php');
 $container = new Container($containerDinition);

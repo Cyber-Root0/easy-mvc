@@ -1,5 +1,5 @@
 <?php
-use CyberRoot0\EasyMvc\Controller\Main;
+use CyberRoot0\EasyMVC\Controller\Main;
 $routes = [
     '/' => Main::class,
     '/teste' => Main::class

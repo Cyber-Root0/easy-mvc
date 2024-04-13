@@ -1,5 +1,5 @@
 <?php
-namespace EasyMvc\DI;
+namespace EasyMVC\DI;
 class ObjectManager
 {
     private static $container = null;    

@@ -1,5 +1,5 @@
 <?php
-namespace EasyMvc\Api;
+namespace EasyMVC\Api;
 interface TemplateApi
 {    
     /**
