@@ -2,13 +2,15 @@
 namespace CyberRoot0\EasyMVC\Controller;
 
 use EasyMVC\Api\ControllerInterface;
-use EasyMVC\Http\AbstractController;
+use EasyMVC\Http\Action;
 use EasyMVC\Layout\Template;
+use EasyMVC\Api\ScopeConfig;
 
-class Main extends AbstractController implements ControllerInterface
+class Main extends Action implements ControllerInterface
 {
     public function __construct(
-        protected Template $view
+        protected Template $view,
+        protected ScopeConfig $scopeConfig
     ) {
 
     }
@@ -16,7 +18,7 @@ class Main extends AbstractController implements ControllerInterface
     {
         return $this->view->render(
             'example', [
-                'name' => 'World'
+                'name' => $this->scopeConfig->getValue('database.drivers.mysql.port')
             ]
         );
     }

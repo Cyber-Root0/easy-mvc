@@ -16,6 +16,13 @@
         }
     ],
     "require": {
-        "php-di/php-di": "^7.0"
-    }
+        "php-di/php-di": "^7.0",
+        "cyber-root0/abstractmodel": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Cyber-Root0/AbstractRepository"
+        }
+    ]
 }
