@@ -2,6 +2,7 @@
 use EasyMVC\Layout\Template;
 use EasyMVC\Config\DataProvider;
 use EasyMVC\Api\ScopeConfig;
+use BrunoAlves\abstractmodel\db\DB;
 return [
     'config' => [
         'view' => [
@@ -33,5 +34,11 @@ return [
             $bdconfig['user'],
             $bdconfig['password']
         );
+    },
+    DB::class => function($container){
+        return new DB(
+            $container->get(PDO::class)
+        );
     }
+
 ];

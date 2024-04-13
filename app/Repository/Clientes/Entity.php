@@ -5,6 +5,6 @@ class Entity extends BEntity
 {
     public string $nome;
     public string $sobrenome;
-    public string $idade;
+    public int $idade;
     
 }

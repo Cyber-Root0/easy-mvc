@@ -6,7 +6,8 @@ use EasyMVC\DI\ObjectManager;
 $containerDinition = require(__DIR__.'/../config/di/container.php');
 $container = new Container($containerDinition);
 ObjectManager::set($container);
-
+/* Exception Error Handler */
+ini_set('display_errors', 0);
 /* Handler Routes */
 try{
     $method = $_SERVER['REQUEST_METHOD'];
