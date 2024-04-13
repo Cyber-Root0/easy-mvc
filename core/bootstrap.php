@@ -21,6 +21,6 @@ try{
         require_once(__DIR__.'/view/404.html');
     }
 }catch(\Exception $e){
-
+    echo $e->getMessage();
 }
 
