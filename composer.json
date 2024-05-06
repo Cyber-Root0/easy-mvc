@@ -17,7 +17,8 @@
     ],
     "require": {
         "php-di/php-di": "^7.0",
-        "cyber-root0/abstractmodel": "dev-main"
+        "cyber-root0/abstractmodel": "dev-main",
+        "cr0/interceptor-php": "^1.0"
     },
     "repositories": [
         {

@@ -1,13 +1,19 @@
 <?php
+$start = microtime(true);
+
 use DI\Container;
 use EasyMVC\Http\Router;
 use EasyMVC\DI\ObjectManager;
+use CR0\Interceptor\Kernel;
 /* DI Configuration */
 $containerDinition = require(__DIR__.'/../config/di/container.php');
-$container = new Container($containerDinition);
-ObjectManager::set($container);
+/* Interceptor Config */
+$kernel = Kernel::getInstance($containerDinition);
+/* Aspect Definition */
+(require(__DIR__.'/../config/di/proxy/aspect.php'));
+$container = $kernel->build();
 /* Exception Error Handler */
-ini_set('display_errors', 0);
+ini_set('display_errors', 1);
 /* Handler Routes */
 try{
     $method = $_SERVER['REQUEST_METHOD'];
@@ -24,4 +30,9 @@ try{
 }catch(\Exception $e){
     echo $e->getMessage();
 }
+// Calculate the execution time
+$end = microtime(true);
+$executionTime = $end - $start;
 
+// Output the result
+echo "Script execution time: " . $executionTime . " seconds";

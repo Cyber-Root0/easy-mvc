@@ -1,19 +1,8 @@
 <?php
 namespace EasyMVC\DI;
+use CR0\Interceptor\DI\Config\Container;
 class ObjectManager
-{
-    private static $container = null;    
-    /**
-     * set unic di container object
-     *
-     * @param  object $container
-     * @return void
-     */
-    public static function set($container){
-        if (self::$container == null){
-            self::$container = $container;
-        }
-    }    
+{   
     /**
      * provide object from DI container
      *
@@ -21,6 +10,6 @@ class ObjectManager
      * @return object
      */
     public static function getInstance(string $classname){
-        return self::$container->get($classname);
+        return Container::get()->get($classname);
     }
 }
